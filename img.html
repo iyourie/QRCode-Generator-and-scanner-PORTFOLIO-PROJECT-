@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The image</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/" href="img/Capture-removebg-preview.png"><!-- icon -->
+    <!-- google font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
+    <!-- google font end-->
+    <!-- font awesome start -->
+    <script src="https://kit.fontawesome.com/073ba09cd5.js" crossorigin="anonymous"></script>
+    <!--font awesome end -->
+
+    <style>
+        /* style start  */
+
+        * {
+            font-family: 'IM Fell DW Pica', serif;
+            text-transform: capitalize;
+        }
+
+        h1 {
+            color: black;
+            text-align: center;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+            margin-left: 10px;
+            transition: 1s;
+        }
+
+        i {
+            color: red;
+            font-size: 35px;
+            margin-left: 15px;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+            border-radius: 6px;
+            width: 140px;
+            height: 40px;
+            font-size: 25px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            color: red;
+            background-color: white;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* query selectors start*/
+
+        /* query selectors end*/
+
+        /* style end*/
+    </style>
+</head>
+
+<body onload="get()">
+
+    <div>
+        <h1>thanks for using<a href="intro.html">ZenQR</a></h1><i class="fa-solid fa-heart"></i>
+    </div>
+    <div>
+        <h2>here is the image </h2> <button>download</button>
+    </div>
+    <div>
+        <img src="" alt="">
+    </div>
+
+    <script src="js/FileSaver.min.js"></script>
+    <script>
+        //js start
+
+        //check if user browser support indexed db
+        const indexedDB =
+            window.indexedDB ||
+            window.mozIndexedDB ||
+            window.webkitIndexedDB ||
+            window.msIndexedDB ||
+            window.shimIndexedDB;
+        //if it's not
+        if (!indexedDB) {
+            console.log("IndexedDB could not be found in this browser.");
+        }
+        let img = document.querySelector('img')
+        function get() {
+            //open indexeddb database or create new one
+            let request = indexedDB.open('testPics', 1);
+            //if an error happend:
+            request.onerror = function (e) {
+                console.error('Unable to open database.');
+            }
+            // if request succes :
+            request.onsuccess = function (e) {
+                db = e.target.result;
+                //create a readwrite transaction
+                let trans = db.transaction(['cachedForms'], 'readwrite');
+                //get element with key:  1 from database
+                let addReq = trans.objectStore('cachedForms').get(1)
+                // add  src to the img tag  
+                setTimeout(() => {
+                    img.src = addReq.result.data
+                }, 100);
+                // if user clicks download (remove element 1 from database and download the image)
+
+            }
+            //if data base is upgraded
+            request.onupgradeneeded = function (e) {
+                let db = e.target.result;
+                db.createObjectStore('cachedForms', { keyPath: 'id', autoIncrement: true });
+                console.log('upgraded')
+            }
+        }
+
+        //when user click download :
+        document.querySelector('button').onclick = () => {
+            //download the image
+            let imgPath = img.getAttribute('src')
+            let fileName = getFileName(imgPath)
+            saveAs(imgPath, fileName)
+            //delete the database
+            indexedDB.deleteDatabase('testPics');
+            //close the window after 2 seconds
+            setTimeout(() => {
+                window.close()
+            }, 2000);
+        }
+        //image type
+        function getFileName(str) {
+            return `your image.${str.match(/(?<=\/).*(?=;)/g)}`
+        }
+        //js end
+
+        window.onbeforeunload = () => {
+            indexedDB.deleteDatabase('testPics');
+        }
+    </script>
+</body>
+
+</html>
