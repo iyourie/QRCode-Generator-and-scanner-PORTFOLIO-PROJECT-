@@ -69,7 +69,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=http://127.0.0.1:5500/img.html&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=http://127.0.0.1:5500/index.html&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
