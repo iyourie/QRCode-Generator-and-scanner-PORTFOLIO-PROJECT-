@@ -1,0 +1,618 @@
+:root {
+    --color: rgb(45, 118, 190);
+    --sec-color: #101820ff;
+    --font: 'IM Fell DW Pica', serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+body {
+    height: 98vh;
+    position: relative;
+}
+
+.header i {
+    color: var(--color);
+    font-size: 30px;
+}
+
+main {
+    display: flex;
+    margin: 50px;
+    border: solid 1px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+main nav {
+    border-right: solid 1px;
+}
+
+main nav div {
+    width: 165px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+main nav div:hover {
+    color: var(--color);
+}
+
+main nav div i {
+    font-size: 25px;
+    margin-right: 4px;
+}
+
+#wifi i {
+    font-size: 22px;
+}
+
+main nav div span {
+    font-size: 24px;
+    text-transform: capitalize;
+}
+
+/* section start */
+section {
+    width: 100%;
+    position: relative;
+}
+
+/* section end */
+
+/* intro div start  */
+.intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: var(--color);
+    text-transform: capitalize;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.intro h1 {
+    text-decoration: underline;
+}
+
+.intro h2{ 
+    font-size: 22px;
+}
+
+/* intro div end  */
+
+/* url div start  */
+.url {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.url h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color);
+}
+
+textarea {
+    resize: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+::placeholder {
+    font-size: 20px;
+}
+
+.url textarea {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.btn {
+    background: white;
+    border: 1px solid var(--color);
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    min-height: 40px;
+    text-align: center;
+    width: 100px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    text-transform: capitalize;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    box-shadow: var(--color) 1px 3px 5px;
+    background-color: var(--color);
+    color: white;
+}
+
+.btn:active {
+    opacity: 0.5;
+}
+
+/* url div end  */
+
+/* image div start */
+.image {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.drag-area {
+    color: var(--color);
+    height: 500px;
+    width: 800px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: var(--color);
+}
+
+.drag-area p {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--color);
+    text-align: center;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color);
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: var(--color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image .btn {
+    align-self: center;
+}
+
+
+.no {
+    border: none;
+}
+
+.change {
+    border: 2px solid var(--color);
+}
+
+
+/* image div end */
+
+.active {
+    color: var(--color);
+}
+
+/* text div start  */
+.text {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color);
+}
+
+.text textarea {
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+/* text div end  */
+
+/* location div start  */
+.location {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.location h1 {
+    font-size: 40px;
+    color: var(--color);
+}
+
+.location label {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.location input {
+    width: 200px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.location h2 {
+    color: var(--color);
+}
+
+.location .ip-btn,
+.lat-long {
+    color: var(--color);
+    background-color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.location .location-btn {
+    margin-top: 20px;
+    align-self: center;
+}
+
+/* location div end */
+
+/* email div start */
+.email {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 48.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.email div {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.email textarea {
+    padding: 5px;
+    font-size: 17px;
+    width: 100%;
+}
+
+.email p {
+    font-size: 15px;
+    color: var(--color);
+}
+
+/* email div end */
+
+/* wifi div start  */
+.wifi {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wifi h1 {
+    font-size: 40px;
+    color: var(--color);
+    text-transform: capitalize;
+}
+
+.wifi div {
+    align-self: flex-start;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.wifi p {
+    margin: 0;
+    font-size: 19px;
+    color: var(--color);
+}
+
+.wifi textarea {
+    margin-left: 15px;
+    font-size: 18px;
+    padding: 3px;
+}
+
+.wifi input {
+    border: 1px solid;
+    width: 380px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+
+.wifi i {
+    align-self: center;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.wifi button {
+    margin-top: 10px;
+    margin-right: 26px;
+}
+
+/* wifi div end  */
+
+/* number div start  */
+.number {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.number h1 {
+    font-size: 40px;
+    color: var(--color);
+    text-transform: capitalize;
+}
+
+.number input {
+    font-size: 18px;
+    width: 658px;
+}
+
+.number button {
+    margin-left: 558px;
+}
+
+/* number div end  */
+
+/* generated qr code start */
+article .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+footer {
+    display: none;
+    align-items: center;
+    border: 1px solid;
+    width: 1000px;
+    height: 500px;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer button {
+    background: white;
+    border: 1px solid var(--color);
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: var(--color);
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    min-height: 40px;
+    text-align: center;
+    width: 300px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    margin: 10px;
+}
+
+footer button:hover {
+    box-shadow: var(--color) 1px 3px 5px;
+    background-color: var(--color);
+    color: white;
+}
+
+footer button:active {
+    opacity: 0.5;
+}
+
+footer #qr-code-creator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer #qr-code-creator div {
+    width: 50%;
+}
+
+footer #qr-code-creator img {
+    width: 500px;
+}
+
+footer #qr-code-creator input[type='range'] {
+    width: 300px;
+    cursor: pointer;
+}
+
+footer #qr-code-creator input[type='color'] {
+    width: 100px;
+    cursor: pointer;
+}
+
+footer #qr-code-creator button {
+    width: 100px;
+}
+
+footer #qr-code-creator .create {
+    width: 300px;
+}
+
+footer #qr-code-creator p {
+    font-size: 20px;
+}
+
+footer #qr-code-generator {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: none;
+}
+
+footer #qr-code-generator #main-qr {
+    width: 50%;
+}
+
+footer #qr-code-generator .ok {
+    width: 530px;
+}
+
+footer #qr-code-generator .bolt {
+    width: 30px;
+    margin-left: 10px;
+}
+
+footer .congrats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .congrats h1 {
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+footer .congrats i {
+    font-size: 25px;
+    margin-left: 15px;
+    color: var(--color);
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer img {
+    width: 250px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.format {
+    color: white;
+    background-color: var(--color);
+    box-shadow: var(--color) 1px 3px 5px;
+}
+
+/* generated qr code end */

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenerateQr Code</title>
+    <link rel="icon" type="image/" href="img/Capture-removebg-preview.png"><!-- icon -->
+    <!-- icon -->
+    <!-- css links  -->
+    <link rel="stylesheet" href="css/generator.css" />
+    <link rel="stylesheet" href="css/generator-media-query.css">
+    <!-- google font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
+    <!-- google font end -->
+    <!-- font awesome kit  -->
+    <script src="https://kit.fontawesome.com/073ba09cd5.js" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="intro.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <main>
+        <nav>
+            <div id="url">
+                <i class="fa-solid fa-link"></i>
+                <span>url</span>
+            </div>
+            <div id="image">
+                <i class="fa-regular fa-image"></i>
+                <span>image</span>
+            </div>
+            <div id="text">
+                <i class="fa-regular fa-file-lines"></i>
+                <span>text</span>
+            </div>
+            <div id="location">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>location</span>
+            </div>
+            <div id="email">
+                <i class="fa-regular fa-envelope"></i>
+                <span>email</span>
+            </div>
+            <div id="wifi">
+                <i class="fa-solid fa-wifi"></i>
+                <span>wifi</span>
+            </div>
+            <div id="number">
+                <i class="fa-regular fa-hashtag"></i>
+                <span>number</span>
+            </div>
+        </nav>
+
+        <section>
+            <div class="intro">
+                <h1>Please follow these steps to generate your firstQr-code:</h1>
+                <h2>
+                    1- select the type (by clicking it) of data you want to enter.
+                </h2>
+                <h2>2- enter you're data.</h2>
+                <h2>3- click Next and then edit you're Qr Code.</h2>
+                <h2>4- when you finish click Create Qr Code button.</h2>
+                <h2>5- then click download and there you are !!</h2>
+            </div>
+
+            <div class="url" id="1">
+                <h1>enter an url</h1>
+                <textarea cols="90" rows="1" placeholder="E.g : https://www.Lightning-Qr.com."></textarea>
+                <button class="btn">next</button>
+            </div>
+
+            <div class="image" id="2">
+                <div class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <p>Drag & Drop to Upload File</p>
+                    <span>OR</span>
+                    <button>Browse File</button>
+                    <input type="file" hidden />
+                </div>
+                <button class="btn">next</button>
+            </div>
+
+            <div class="text" id="3">
+                <h1>enter a text</h1>
+                <textarea cols="90" rows="10" placeholder="Type Here..." value="https://hogangnono.com"></textarea>
+                <button class="btn">next</button>
+            </div>
+
+            <div class="location" id="4">
+                <h1>enter a location</h1>
+                <div>
+                    <label for="">lat :</label>
+                    <input type="number" />
+                    <label for="">long :</label>
+                    <input type="number" />
+                    <button class="lat-long">get my lat long coordinates</button>
+                </div>
+                <h2>AND\OR</h2>
+                <div>
+                    <label for="">ip adresse :</label>
+                    <input type="text" id="ip" />
+                    <button class="ip-btn">get my ip adress</button>
+                </div>
+                <button class="btn location-btn">next</button>
+            </div>
+
+            <div class="email" id="5">
+                <div>
+                    <p>Email :</p>
+                    <textarea name="" id="" cols="90" rows="1"></textarea>
+                </div>
+                <div>
+                    <p>Object :</p>
+                    <textarea name="" id="" cols="90" rows="1"></textarea>
+                </div>
+                <div>
+                    <p>Message :</p>
+                    <textarea name="" id="" cols="90" rows="10"></textarea>
+                </div>
+                <button class="btn">next</button>
+            </div>
+
+            <div class="wifi" id="6">
+                <h1>enter wifi informations</h1>
+                <div>
+                    <p>name :</p>
+                    <textarea name="" id="" cols="40" rows="1"></textarea>
+                </div>
+                <div>
+                    <p>security :</p>
+                    <textarea name="" id="" cols="40" rows="1"></textarea>
+                </div>
+                <div>
+                    <p>password :</p>
+                    <input type="password" name="" id="password" />
+                    <i class="fa-regular fa-eye-slash" id="togglePassword"></i>
+                </div>
+                <button class="btn">next</button>
+            </div>
+
+            <div class="number" id="7">
+                <h1>enter a number</h1>
+                <input type="number" name="" id="" />
+                <button class="btn">next</button>
+            </div>
+        </section>
+    </main>
+
+    <article>
+        <aside></aside>
+        <footer>
+            <div id="qr-code-creator">
+                <div>
+                    <img src="img/Developer activity-rafiki.png" alt="">
+                </div>
+                <div>
+                    <h3>Size :</h3>
+                    <input type="range" min="10" max="1000" value="200" oninput="track(this.value)">
+                    <p>200x200</p>
+                    <h3>Color :</h3>
+                    <input type="color" oninput="colour(this.value)">
+                    <span class="formats">
+                        <h3>Format :</h3>
+                        <button
+                            class="format">png</button><button>jpeg</button><button>jpg</button><button>svg</button><button>gif</button>
+                    </span>
+                    <br>
+                    <button class="create">Create QrCode</button>
+                </div>
+            </div>
+            <div id="qr-code-generator">
+                <div>
+                    <img src="img/Ok-bro.png" class="ok">
+                </div>
+                <div id="main-qr">
+                    <span class="congrats">
+                        <h1>congratulations, you have made it</h1>
+                        <img src="img/Capture-removebg-preview.png" alt="" class="bolt">
+                    </span>
+                    <div id="qrcode"></div>
+                    <button class="download">Download</button>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/generator.js"></script>
+</body>
+
+</html>

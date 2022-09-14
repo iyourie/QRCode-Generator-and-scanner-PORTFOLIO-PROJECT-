@@ -1,0 +1,372 @@
+:root {
+    --color: rgb(45, 118, 190);
+    --sec-color: #101820ff;
+    --font: 'IM Fell DW Pica', serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-weight: 100;
+}
+
+
+
+svg#freepik_stories-qr-code:not(.animated) .animable {
+    opacity: 0;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--background-simple--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideUp;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Furniture--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) lightSpeedLeft;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Plant--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) lightSpeedRight;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Picture--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) zoomOut;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Floor--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) zoomOut;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Device--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) zoomOut;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--qr-code--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) fadeIn;
+    animation-delay: 0s;
+}
+
+svg#freepik_stories-qr-code.animated #freepik--Character--inject-32 {
+    animation: 1s 1 forwards cubic-bezier(.36, -0.01, .5, 1.38) slideDown;
+    animation-delay: 0s;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: inherit;
+    }
+}
+
+@keyframes lightSpeedLeft {
+    from {
+        transform: translate3d(-50%, 0, 0) skewX(20deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: skewX(-10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: skewX(2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes lightSpeedRight {
+    from {
+        transform: translate3d(50%, 0, 0) skewX(-20deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: skewX(10deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: skewX(-2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animator-hidden {
+    display: none;
+}
+
+/* CSS */
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header img {
+    width: 300px;
+}
+
+main {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main div {
+    margin-top: 50px;
+}
+
+main div h1 {
+    color: var(--sec-color);
+    font-size: 60px;
+}
+
+main div span {
+    color: var(--color);
+    font-size: 60px;
+}
+
+main svg {
+    width: 750px;
+}
+
+button {
+    background: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 16px;
+    min-height: 40px;
+    text-align: center;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    width: 200px;
+    margin: 5px 10px 0 0;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    color: var(--color);
+    background-color: white;
+    box-shadow: var(--color) 3px 5px 5px;
+}
+
+button:active {
+    opacity: .5;
+}
+
+/* meadia query start  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+
+    header img {
+        width: 250px;
+    }
+
+    main div {
+        margin-bottom: 100px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    main div h1 {
+        font-size: 40px;
+    }
+
+    main div span {
+        font-size: 40px;
+    }
+
+    main svg {
+        max-width: 100%;
+    }
+
+    button {
+        width: 100px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px;
+    }
+
+    header img {
+        width: 250px;
+    }
+
+    main div {
+        margin-bottom: 100px;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    main div h1 {
+        font-size: 50px;
+    }
+
+    main div span {
+        font-size: 50px;
+    }
+
+    main svg {
+        width: 400px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    main div {
+        margin-bottom: 50px;
+    }
+
+    main svg {
+        width: 500px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    header img {
+        width: 280px;
+    }
+
+    main div {
+        margin: 0px;
+        margin-bottom: 50px;
+    }
+
+    main div h1 {
+        font-size: 70px;
+    }
+
+    main div span {
+        font-size: 70px;
+    }
+
+}
+
+/* X large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main div {
+        margin-top: 50px;
+        align-self: flex-start;
+        text-align: start;
+    }
+
+    main div h1 {
+        font-size: 40px;
+        text-align: start;
+    }
+
+    main div span {
+        font-size: 40px;
+        text-align: start;
+    }
+
+    main svg {
+        width: 750px;
+    }
+
+    button {
+        width: 150px;
+    }
+}
+
+/* XX large devices (Very large laptops and desktops, 1500px and up) */
+@media only screen and (min-width: 1500px) {
+
+    main div h1 {
+        font-size: 60px;
+        text-align: start;
+    }
+
+    main div span {
+        font-size: 60px;
+        text-align: start;
+    }
+
+    main svg {
+        width: 850px;
+    }
+
+    button {
+        width: 200px;
+    }
+}
+
+/* meadia query end  */

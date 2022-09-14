@@ -1,0 +1,61 @@
+/*Media Query Start*/
+@media (max-width: 1000px) {
+    .intro h1 {
+        font-size: 25px;
+    }
+
+    .intro h2 {
+        font-size: 19px;
+    }
+
+    .url textarea {
+        width: 600px;
+    }
+
+    .drag-area {
+        width: 400px;
+    }
+
+    .drag-area img {
+        width: 100%;
+    }
+
+    .image .btn::before {
+        width: 0px;
+    }
+
+    .image .btn {
+        margin-left: 10px;
+    }
+
+    .text textarea {
+        width: 600px;
+    }
+
+    .location div {
+        text-align: center;
+    }
+
+    .email textarea {
+        width: 600px;
+    }
+
+    .wifi textarea,
+    .wifi input {
+        width: 500px;
+    }
+
+    .wifi button {
+        margin: 0px;
+    }
+
+    .number input {
+        width: 600px;
+    }
+    .number button{
+        margin: 0px;
+        margin-top: 5px;
+    }
+}
+
+/*Media Query End*/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <link rel="icon" type="image/" href="img/Capture-removebg-preview.png"><!-- icon -->
+    <link rel="stylesheet" href="css/scanner.css">
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap" rel="stylesheet">
+    <!-- font awesome  -->
+    <script src="https://kit.fontawesome.com/073ba09cd5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="intro.html">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+    </div>
+
+    <!-- <div class="lds-dual-ring"></div> -->
+    <aside>
+        <div class="ocrloader">
+            <em></em>
+            <div>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i>
+            </div>
+            <span></span>
+        </div>
+    </aside>
+
+    <main>
+        <div class="drag-area">
+            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <header>Drag Your File Here OR Click To select It</header>
+            <input type="file" hidden>
+        </div>
+        <div id="txt">
+            <a href="" target="_blank"></a>
+            <h1></h1>
+        </div>
+    </main>
+
+
+    <script src="js/scanner.js"></script>
+</body>
+
+</html>
