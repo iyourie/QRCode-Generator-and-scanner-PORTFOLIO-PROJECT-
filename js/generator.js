@@ -83,7 +83,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${document.querySelector(".yes").querySelector("textarea").value}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${document.querySelector(".yes").querySelector("textarea").value}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -101,7 +101,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${`Lat: ${document.querySelector(".yes").querySelectorAll("input")[0].value} || Long: ${document.querySelector(".yes").querySelectorAll("input")[1].value} || Ip: ${document.querySelector(".yes").querySelectorAll("input")[2].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${`Lat: ${document.querySelector(".yes").querySelectorAll("input")[0].value} || Long: ${document.querySelector(".yes").querySelectorAll("input")[1].value} || Ip: ${document.querySelector(".yes").querySelectorAll("input")[2].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -115,7 +115,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${`Lat: ${document.querySelector(".yes").querySelectorAll("input")[0].value} || Long: ${document.querySelector(".yes").querySelectorAll("input")[1].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${`Lat: ${document.querySelector(".yes").querySelectorAll("input")[0].value} || Long: ${document.querySelector(".yes").querySelectorAll("input")[1].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -130,7 +130,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${`Ip: ${document.querySelector(".yes").querySelectorAll("input")[2].value} `}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${`Ip: ${document.querySelector(".yes").querySelectorAll("input")[2].value} `}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -145,7 +145,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${`Email: ${document.querySelector(".yes").querySelectorAll("textarea")[0].value} || Object: ${document.querySelector(".yes").querySelectorAll("textarea")[1].value} || Message: ${document.querySelector(".yes").querySelectorAll("textarea")[2].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${`Email: ${document.querySelector(".yes").querySelectorAll("textarea")[0].value} || Object: ${document.querySelector(".yes").querySelectorAll("textarea")[1].value} || Message: ${document.querySelector(".yes").querySelectorAll("textarea")[2].value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -165,7 +165,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${`Wifi Name: ${document.querySelector(".yes").querySelector("textarea").value} || Security Type: ${document.querySelector(".yes").querySelectorAll("textarea")[1].value} || Wifi Password: ${document.querySelector(".yes").querySelector("input").value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${`Wifi Name: ${document.querySelector(".yes").querySelector("textarea").value} || Security Type: ${document.querySelector(".yes").querySelectorAll("textarea")[1].value} || Wifi Password: ${document.querySelector(".yes").querySelector("input").value}`}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
@@ -179,7 +179,7 @@ nav.forEach((x) => {
                     footer.style.display = "flex";
                     document.querySelector('#qr-code-creator').style.display = 'flex'
                     generateQRCode.onclick = () => {
-                        let img = `<img src="${`http://api.qrserver.com/v1/create-qr-code/?data=${document.querySelector(".yes").querySelector("input").value}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
+                        let img = `<img src="${`https://api.qrserver.com/v1/create-qr-code/?data=${document.querySelector(".yes").querySelector("input").value}&size=${range}x${range}&color=${color}&format=${format}&margin=10`}"/>`;
                         footer.querySelector('#qrcode').innerHTML = img
                         document.querySelector('#qr-code-creator').style.display = 'none';
                         document.querySelector('#qr-code-generator').style.display = 'flex'
