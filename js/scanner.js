@@ -92,7 +92,7 @@ function showFile() {
 
 //this code is the most important LOL
 function request(file, formData) {
-    fetch('http://api.qrserver.com/v1/read-qr-code/', {
+    fetch('https://api.qrserver.com/v1/read-qr-code/', {
         method: "POST", body: formData
     }).then(res => res.json()).then(result => {
         if (result[0].symbol[0].data !== null) {
